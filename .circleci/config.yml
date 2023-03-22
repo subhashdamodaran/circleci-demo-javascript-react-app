@@ -9,6 +9,10 @@ jobs:
     docker:
       - image: cimg/node:14.13.0
       - image: postgres:9.6
+        environment:
+            POSTGRES_USER: "SAM"
+            POSTGRES_DB: "mydb"
+            POSTGRES_PASSWORD: "samster"
     steps:
       - checkout
       - run: 
